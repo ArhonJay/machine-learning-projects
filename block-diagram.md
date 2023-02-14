@@ -3,6 +3,8 @@
 blockdiag {
   blockdiag -> generates -> "block-diagrams";
   blockdiag -> is -> "very easy!";
+  "block-diagrams" -> generates;
+  "block-diagrams" -> "very easy!";
 
   blockdiag [color = "greenyellow"];
   "block-diagrams" [color = "pink"];
