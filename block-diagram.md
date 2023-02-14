@@ -23,7 +23,8 @@ blockdiag {
 ```
 seqdiag {
   ESP8266  -> browser [label = "localhost:3000"];
-  browser -> webserver [label = "GET /index.html"];
-  browser <-- webserver [label = "index.html"]
+  browser -> webserver [label = "GET /index.html/?query"];
+  browser <-- webserver [label = "sends back req.params"]
+  browser <-- ESP8266 [label = "params = value read"]
 }
 ```
