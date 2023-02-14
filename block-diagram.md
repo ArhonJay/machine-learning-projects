@@ -22,11 +22,8 @@ blockdiag {
 ### lang = none
 ```
 seqdiag {
-  browser  -> webserver [label = "GET /index.html"];
-  browser <-- webserver;
-  browser  -> webserver [label = "POST /blog/comment"];
-  webserver  -> database [label = "INSERT comment"];
-  webserver <-- database;
-  browser <-- webserver;
+  ESP8266  -> browser [label = "localhost:3000"];
+  browser -> webserver [label = "GET /index.html"];
+  browser <-- webserver [label = "index.html"]
 }
 ```
