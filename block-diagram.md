@@ -10,7 +10,7 @@ blockdiag {
   "Internet of Things" -> "Passive Buzzer";
   "Internet of Things" -> "Computer Fan";
   
-  DHT11 [color = "blue"]
+  DHT11 [color = "whiteblue"]
   MQ9 [color = "violet"]
   "ESP8266" [color = "orange"];
   "connected" [color = "greenyellow"];
