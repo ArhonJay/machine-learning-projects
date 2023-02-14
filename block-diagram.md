@@ -1,9 +1,9 @@
 ### lang = blockdiag
 ```blockdiag
 blockdiag {
-  "ESP8266" -> initialize -> "connected" -> internet of things;
+  "ESP8266" -> initialize -> "connected" -> "internet of things (IOT)";
   initialize -> "is not connected";
-  "is not connected" -> "ESP8266" [label = "error"];
+  "is not connected" -> "ESP8266";
 
   "ESP8266" [color = "orange"];
   "connected" [color = "greenyellow"];
