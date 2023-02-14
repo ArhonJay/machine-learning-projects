@@ -1,14 +1,12 @@
 ### lang = blockdiag
 ```blockdiag
 blockdiag {
-  blockdiag -> generates -> "block-diagrams";
-  blockdiag -> is -> "very easy!" [label = "on/off"];
-  "block-diagrams" -> generates;
-  "block-diagrams" -> "very easy!";
+  "ESP8266" -> initialize -> "connected";
+  initialize -> "is not connected" -> "ESP8266" [label = "wlan error"];
 
-  blockdiag [color = "greenyellow"];
-  "block-diagrams" [color = "pink"];
-  "very easy!" [color = "orange"];
+  "ESP8266" [color = "orange"];
+  "connected" [color = "greenyellow"];
+  "is not connected" [color = "red"];
 }
 ```
 
