@@ -14,7 +14,7 @@ blockdiag {
   MQ9 [color = "violet"]
   "ESP8266" [color = "orange"];
   "connected" [color = "greenyellow"];
-  "is not connected" [color = "red"];
+  "is not connected" [color = "crimson"];
 }
 ```
 
