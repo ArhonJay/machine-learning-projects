@@ -25,6 +25,6 @@ seqdiag {
   ESP8266  -> browser [label = "localhost:3000"];
   browser -> webserver [label = "GET /index.html/?query"];
   browser <-- webserver [label = "sends back req.params"]
-  browser <-- ESP8266 [label = "params = value read"]
+  ESP8266 <-- browser [label = "params = value read"]
 }
 ```
