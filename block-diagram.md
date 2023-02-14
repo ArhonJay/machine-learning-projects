@@ -2,7 +2,7 @@
 ```blockdiag
 blockdiag {
   blockdiag -> generates -> "block-diagrams";
-  blockdiag -> is -> "very easy!";
+  blockdiag -> is -> "very easy!" [label = "on/off"];
   "block-diagrams" -> generates;
   "block-diagrams" -> "very easy!";
 
