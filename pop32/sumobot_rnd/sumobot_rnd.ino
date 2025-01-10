@@ -64,6 +64,7 @@ int count = 0;
 
 void setup() 
 {
+Serial1.begin(9600); // Initialize Serial1 for TX/RX communication
 oled.text(0,16,"RnD");
 oled.text(1,16,"ROBO");
 oled.text(2,16,"REALM");
@@ -77,14 +78,15 @@ oled.show();
 waitAnykey_bmp();
 oled.clear();
 oled.show();
-while(!SW_A() && !SW_B() && !SW_OK());
+
+while(!SW_A() && !SW_B() && !Serial1.available());
 if(SW_A() || SW_B())
 {
   MEM = 0;
   oled.text(0,0,"  - RND ROBOREALM -");
   oled.text(3,0,"     READ SENSOR ");
 }
-else if(SW_OK())
+else if(Serial1.available() && Serial1.read() == 56)
 {
   oled.text(0,0,"  - RND ROBOREALM -");
   oled.text(3,8,"SUMO");
